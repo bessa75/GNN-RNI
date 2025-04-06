@@ -24,6 +24,7 @@ class PlanarSATPairsDataset(InMemoryDataset):
 
     def process(self):
         # Read data into huge `Data` list.
+        print(os.getcwd())
         data_list = pickle.load(open(os.path.join(self.root, "raw/"+NAME+".pkl"), "rb"))
 
         if self.pre_filter is not None:
